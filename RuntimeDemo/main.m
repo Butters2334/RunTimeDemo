@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "NSObject+runtime.h"
 #import "AcModel.h"
+#import "AcModel+category.h"
 
 int main(int argc, const char * argv[])
 {
@@ -23,6 +24,12 @@ int main(int argc, const char * argv[])
         NSLog(@"%@",[aModel methodList]);
         NSLog(@"%@",[aModel ivarList]);
         NSLog(@"%@",[aModel protocolList]);
+        
+        
+        aModel.categoryPropertyForString = @"text";
+//        aModel.categoryPropertyForString = nil;
+//        aModel.categoryPropertyForString = [NSObject new];
+        NSLog(@"%@",aModel.categoryPropertyForString);
         
         NSLog(@"");
     }

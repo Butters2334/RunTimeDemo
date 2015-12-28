@@ -13,7 +13,6 @@
 }
 @end
 @implementation AcModel
-
 -(NSString *)methodForInterface
 {
     NSLog(@"%@",NSStringFromSelector(_cmd));

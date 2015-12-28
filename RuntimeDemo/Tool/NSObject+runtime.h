@@ -19,15 +19,18 @@
  */
 +(void)exchangeWithMethod1:(SEL)originalSelector andMethod2:(SEL)swizzledSelector;
 +(void)exchangeWithSEL1:(NSString *)originalSelector andSEL2:(NSString *)swizzledSelector;
-
-
+//函数调用
 -(id)ac_performSelector:(SEL)aSel;
 
-
+/**属性列表*/
 -(NSArray<NSString *>*)propertyList;
+/**函数列表*/
 -(NSArray<NSString *>*)methodList;
+/**变量列表*/
 -(NSArray<NSString *>*)ivarList;
+/**协议列表*/
 -(NSArray<NSString *>*)protocolList;
+
 @end
 
 
