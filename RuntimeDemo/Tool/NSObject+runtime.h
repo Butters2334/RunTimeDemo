@@ -1,19 +1,14 @@
 //
-//  RTTool.h
-//  RuntimeDemo
+//  NSObject+runtime.h
+//  muyingzhijia
 //
-//  Created by Anc on 15/12/7.
-//  Copyright © 2015年 Ancc. All rights reserved.
+//  Created by Anc on 15/12/10.
+//  Copyright © 2015年 holyca. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface RuntimeTool : NSObject
-
-@end
-
-
-@interface NSObject(runtime)
+@interface NSObject (runtime)
 /**
  *  修改任何类的函数,使用新函数替代,可用于delegate或系统函数
  *  @tip:需要注意替换之后在整个项目中都不能调用原先的函数,需要时都只能调用新函数,函数交换需要严格考虑好
@@ -24,4 +19,16 @@
  */
 +(void)exchangeWithMethod1:(SEL)originalSelector andMethod2:(SEL)swizzledSelector;
 +(void)exchangeWithSEL1:(NSString *)originalSelector andSEL2:(NSString *)swizzledSelector;
+
+
+-(id)ac_performSelector:(SEL)aSel;
+
+
+-(NSArray<NSString *>*)propertyList;
+-(NSArray<NSString *>*)methodList;
+-(NSArray<NSString *>*)ivarList;
+-(NSArray<NSString *>*)protocolList;
 @end
+
+
+

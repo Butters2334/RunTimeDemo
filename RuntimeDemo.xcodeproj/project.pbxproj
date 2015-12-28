@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A2FF50611C30D5660097F12C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FF50601C30D5660097F12C /* main.m */; };
+		A2FF506A1C30D6FD0097F12C /* NSObject+runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FF50691C30D6FD0097F12C /* NSObject+runtime.m */; };
+		A2FF506E1C30D7550097F12C /* AcModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FF506D1C30D7550097F12C /* AcModel.m */; };
+		A2FF50731C30D8C80097F12C /* AcModel+category.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FF50721C30D8C80097F12C /* AcModel+category.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,14 @@
 /* Begin PBXFileReference section */
 		A2FF505D1C30D5660097F12C /* RuntimeDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RuntimeDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2FF50601C30D5660097F12C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A2FF50681C30D6FD0097F12C /* NSObject+runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+runtime.h"; sourceTree = "<group>"; };
+		A2FF50691C30D6FD0097F12C /* NSObject+runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+runtime.m"; sourceTree = "<group>"; };
+		A2FF506C1C30D7550097F12C /* AcModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcModel.h; sourceTree = "<group>"; };
+		A2FF506D1C30D7550097F12C /* AcModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcModel.m; sourceTree = "<group>"; };
+		A2FF50711C30D8C80097F12C /* AcModel+category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AcModel+category.h"; sourceTree = "<group>"; };
+		A2FF50721C30D8C80097F12C /* AcModel+category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AcModel+category.m"; sourceTree = "<group>"; };
+		A2FF50751C30D8F90097F12C /* AcProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcProtocol.h; sourceTree = "<group>"; };
+		A2FF50761C30D91C0097F12C /* AcProtocol_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcProtocol_private.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +68,33 @@
 		A2FF505F1C30D5660097F12C /* RuntimeDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A2FF506B1C30D7450097F12C /* model */,
+				A2FF50671C30D6FD0097F12C /* Tool */,
 				A2FF50601C30D5660097F12C /* main.m */,
 			);
 			path = RuntimeDemo;
+			sourceTree = "<group>";
+		};
+		A2FF50671C30D6FD0097F12C /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				A2FF50681C30D6FD0097F12C /* NSObject+runtime.h */,
+				A2FF50691C30D6FD0097F12C /* NSObject+runtime.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		A2FF506B1C30D7450097F12C /* model */ = {
+			isa = PBXGroup;
+			children = (
+				A2FF506C1C30D7550097F12C /* AcModel.h */,
+				A2FF506D1C30D7550097F12C /* AcModel.m */,
+				A2FF50711C30D8C80097F12C /* AcModel+category.h */,
+				A2FF50721C30D8C80097F12C /* AcModel+category.m */,
+				A2FF50751C30D8F90097F12C /* AcProtocol.h */,
+				A2FF50761C30D91C0097F12C /* AcProtocol_private.h */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +153,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2FF506E1C30D7550097F12C /* AcModel.m in Sources */,
+				A2FF506A1C30D6FD0097F12C /* NSObject+runtime.m in Sources */,
 				A2FF50611C30D5660097F12C /* main.m in Sources */,
+				A2FF50731C30D8C80097F12C /* AcModel+category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +245,7 @@
 		A2FF50651C30D5660097F12C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -214,6 +253,7 @@
 		A2FF50661C30D5660097F12C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -237,6 +277,7 @@
 				A2FF50661C30D5660097F12C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

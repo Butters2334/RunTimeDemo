@@ -7,11 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSObject+runtime.h"
+#import "AcModel.h"
 
-int main(int argc, const char * argv[]) {
-    @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+int main(int argc, const char * argv[])
+{
+    @autoreleasepool
+    {
+        AcModel *aModel =[AcModel new];
+//        id rc1 = [aModel performSelector:@selector(methodForInterface)];
+//        id rc2 = [aModel ac_performSelector:@selector(methodForInterface)];
+//        id rc3 = [aModel ac_performSelector:@selector(methodForImp)];
+        
+        NSLog(@"%@",[aModel propertyList]);
+        NSLog(@"%@",[aModel methodList]);
+        NSLog(@"%@",[aModel ivarList]);
+        NSLog(@"%@",[aModel protocolList]);
+        
+        NSLog(@"");
     }
     return 0;
 }
