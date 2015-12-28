@@ -15,6 +15,7 @@
 		A21056B01C15529B00D25B0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A21056AE1C15529B00D25B0B /* LaunchScreen.storyboard */; };
 		A21056BB1C15529B00D25B0B /* RuntimeDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A21056BA1C15529B00D25B0B /* RuntimeDemoTests.m */; };
 		A21056C61C15529B00D25B0B /* RuntimeDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A21056C51C15529B00D25B0B /* RuntimeDemoUITests.m */; };
+		A21056D51C1552B400D25B0B /* RuntimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A21056D41C1552B400D25B0B /* RuntimeTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		A21056C11C15529B00D25B0B /* RuntimeDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuntimeDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A21056C51C15529B00D25B0B /* RuntimeDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeDemoUITests.m; sourceTree = "<group>"; };
 		A21056C71C15529B00D25B0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A21056D31C1552B400D25B0B /* RuntimeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeTool.h; sourceTree = "<group>"; };
+		A21056D41C1552B400D25B0B /* RuntimeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 			children = (
 				A21056A31C15529B00D25B0B /* AppDelegate.h */,
 				A21056A41C15529B00D25B0B /* AppDelegate.m */,
+				A21056D31C1552B400D25B0B /* RuntimeTool.h */,
+				A21056D41C1552B400D25B0B /* RuntimeTool.m */,
 				A21056A61C15529B00D25B0B /* ViewController.h */,
 				A21056A71C15529B00D25B0B /* ViewController.m */,
 				A21056A91C15529B00D25B0B /* Main.storyboard */,
@@ -273,6 +278,7 @@
 				A21056A81C15529B00D25B0B /* ViewController.m in Sources */,
 				A21056A51C15529B00D25B0B /* AppDelegate.m in Sources */,
 				A21056A21C15529B00D25B0B /* main.m in Sources */,
+				A21056D51C1552B400D25B0B /* RuntimeTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
