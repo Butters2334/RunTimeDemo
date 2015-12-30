@@ -19,6 +19,9 @@
  */
 +(void)exchangeWithMethod1:(SEL)originalSelector andMethod2:(SEL)swizzledSelector;
 +(void)exchangeWithSEL1:(NSString *)originalSelector andSEL2:(NSString *)swizzledSelector;
+//-(void)exchangeWithMethod1:(SEL)originalSelector andMethod2:(SEL)swizzledSelector;
+//-(void)exchangeWithSEL1:(NSString *)originalSelector andSEL2:(NSString *)swizzledSelector;
+
 //函数调用
 -(id)ac_performSelector:(SEL)aSel;
 

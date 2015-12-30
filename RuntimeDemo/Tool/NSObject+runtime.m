@@ -62,6 +62,14 @@
     [self exchangeWithMethod1:NSSelectorFromString(originalSelector)
                    andMethod2:NSSelectorFromString(swizzledSelector)];
 }
+//-(void)exchangeWithMethod1:(SEL)originalSelector andMethod2:(SEL)swizzledSelector
+//{
+//    [self.class exchangeWithMethod1:originalSelector andMethod2:swizzledSelector];
+//}
+//-(void)exchangeWithSEL1:(NSString *)originalSelector andSEL2:(NSString *)swizzledSelector
+//{
+//    [self.class exchangeWithSEL1:originalSelector andSEL2:swizzledSelector];
+//}
 
 
 -(id)ac_performSelector:(SEL)aSel
