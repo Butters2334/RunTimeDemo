@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A243621B1C462AD1009E222F /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = A243621A1C462AD1009E222F /* Aspects.m */; };
 		A27C117B1C3374F70093A090 /* AcMethodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A27C117A1C3374F70093A090 /* AcMethodModel.m */; };
 		A2FF50611C30D5660097F12C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FF50601C30D5660097F12C /* main.m */; };
 		A2FF506A1C30D6FD0097F12C /* NSObject+runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FF50691C30D6FD0097F12C /* NSObject+runtime.m */; };
@@ -27,6 +28,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A24362191C462AD1009E222F /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
+		A243621A1C462AD1009E222F /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
 		A27C11791C3374F70093A090 /* AcMethodModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcMethodModel.h; sourceTree = "<group>"; };
 		A27C117A1C3374F70093A090 /* AcMethodModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcMethodModel.m; sourceTree = "<group>"; };
 		A2FF505D1C30D5660097F12C /* RuntimeDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RuntimeDemo; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +84,8 @@
 		A2FF50671C30D6FD0097F12C /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				A24362191C462AD1009E222F /* Aspects.h */,
+				A243621A1C462AD1009E222F /* Aspects.m */,
 				A2FF50681C30D6FD0097F12C /* NSObject+runtime.h */,
 				A2FF50691C30D6FD0097F12C /* NSObject+runtime.m */,
 			);
@@ -163,6 +168,7 @@
 				A2FF50611C30D5660097F12C /* main.m in Sources */,
 				A27C117B1C3374F70093A090 /* AcMethodModel.m in Sources */,
 				A2FF50731C30D8C80097F12C /* AcModel+category.m in Sources */,
+				A243621B1C462AD1009E222F /* Aspects.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

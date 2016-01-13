@@ -11,6 +11,8 @@
 #import "AcModel.h"
 #import "AcModel+category.h"
 #import "AcMethodModel.h"
+#import "Aspects.h"
+#import <objc/runtime.h>
 
 int main(int argc, const char * argv[])
 {
@@ -34,21 +36,36 @@ int main(int argc, const char * argv[])
 //        //aModel.categoryPropertyForString = [NSObject new];
 //        NSLog(@"%@",aModel.categoryPropertyForString);
         
-//        函数交换
+////        函数交换
         AcMethodModel *methodModel = [AcMethodModel new];
-        //        1 2 3
-        [AcMethodModel exchangeWithMethod1:@selector(method_str) andMethod2:@selector(method_str2)];
-        //        2 1 3
-        [AcMethodModel exchangeWithMethod1:@selector(method_str2) andMethod2:@selector(method_str3)];
-        //        2 3 1
-        [AcMethodModel exchangeWithMethod1:@selector(method_str3) andMethod2:@selector(method_str)];
-        //        1 3 2
-        [AcMethodModel exchangeWithMethod1:@selector(method_str3) andMethod2:@selector(method_str2)];
-        //        1 2 3
+//        //        1 2 3
+//        [AcMethodModel exchangeWithMethod1:@selector(method_str) andMethod2:@selector(method_str2)];
+//        //        2 1 3
+//        [AcMethodModel exchangeWithMethod1:@selector(method_str2) andMethod2:@selector(method_str3)];
+//        //        2 3 1
+//        [AcMethodModel exchangeWithMethod1:@selector(method_str3) andMethod2:@selector(method_str)];
+//        //        1 3 2
+//        [AcMethodModel exchangeWithMethod1:@selector(method_str3) andMethod2:@selector(method_str2)];
+//        //        1 2 3
+                
+//        BOOL b = [AcMethodModel instancesRespondToSelector:@selector(class_method_str)];
+//        NSMethodSignature *methodSignature=[[AcMethodModel class] instanceMethodSignatureForSelector:@selector(class_method_str)];
+        [NSClassFromString(@"AcMethodModel") aspect_hookSelector:@selector(class_method_str) withOptions:(AspectPositionAfter) usingBlock:^(id<AspectInfo>info){
+            NSString *str = @"Test_Class";
+            [[info originalInvocation]setReturnValue:&str];
+        } error:nil];
+
+        [objc_getClass("AcMethodModel") aspect_hookSelector:@selector(method_str) withOptions:(AspectPositionAfter) usingBlock:^(id<AspectInfo>info){
+            
+//            NSLog(@"%@",[info description]);
+            NSString *str = @"Test";
+            [[info originalInvocation]setReturnValue:&str];
+        } error:nil];
+        
         NSLog(@"%@",[methodModel method_str]);
-        NSLog(@"%@",[methodModel method_str2]);
-        NSLog(@"%@",[methodModel method_str3]);
-//        NSLog(@"%@",[AcMethodModel class_method_str]);
+//        NSLog(@"%@",[methodModel method_str2]);
+//        NSLog(@"%@",[methodModel method_str3]);
+        NSLog(@"%@",[AcMethodModel class_method_str]);
 //        NSLog(@"%@",[AcMethodModel class_method_str2]);
 //        NSLog(@"%@",[AcMethodModel class_method_str3]);
         

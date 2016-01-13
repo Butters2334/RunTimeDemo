@@ -100,6 +100,8 @@
         objc_property_t property       = propertyList[index];
         const char *propertyName       = property_getName(property);
         const char *propertyAttributes = property_getAttributes(property);
+//        unsigned int attributeCount;
+//        objc_property_attribute_t *attribute_t = property_copyAttributeList(property, &attributeCount);
         [nameList addObject:[NSString stringWithUTF8String:propertyName]];
         [attributesList addObject:[NSString stringWithUTF8String:propertyAttributes]];
     }

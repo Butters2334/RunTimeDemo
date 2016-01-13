@@ -34,6 +34,8 @@
 /**协议列表*/
 -(NSArray<NSString *>*)protocolList;
 
+//-(void)addProperty
+
 @end
 
 

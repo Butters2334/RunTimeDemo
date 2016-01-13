@@ -17,7 +17,7 @@
 //@property NSInteger categoryPropertyForInteger;
 //@property CGFloat   categoryPropertyForFloat;
 //@property Class     categoryPropertyForClass;
-
+@property NSArray <NSString *>*categoryPropertyForArray;
 @end
 
 
